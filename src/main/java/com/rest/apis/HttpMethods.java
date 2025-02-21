@@ -32,4 +32,12 @@ public class HttpMethods {
     public boolean userDTO(@RequestBody User user) {
         return this.users.add(user);
     }
+
+    // method to put user at index 0 in arraylist
+    @PutMapping("/hello/put/{firstName}")
+    public User putMethod(@PathVariable String firstName, @RequestParam String lastName){
+        User user = new User(firstName, lastName);
+        users.add(0, user);
+        return users.get(0);
+    }
 }
