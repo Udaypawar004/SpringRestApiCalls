@@ -1,4 +1,4 @@
-package com.rest.apis.controller;
+package com.rest.apis.dto;
 
 public class User {
     String firstName;

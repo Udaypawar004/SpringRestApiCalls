@@ -1,5 +1,6 @@
 package com.rest.apis.controller;
 
+import com.rest.apis.dto.User;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
