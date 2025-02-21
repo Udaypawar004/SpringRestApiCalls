@@ -2,6 +2,8 @@ package com.rest.apis;
 
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
+
 @RestController
 @RequestMapping("api")
 public class HttpMethods {
@@ -21,5 +23,13 @@ public class HttpMethods {
     @GetMapping("hello/param/{name}")
     public String nameWithparam(@PathVariable String name){
         return "hello! " + name;
+    }
+
+
+    // method to post user in arraylist
+    ArrayList<User> users = new ArrayList<>();
+    @PostMapping("/hello/post")
+    public boolean userDTO(@RequestBody User user) {
+        return this.users.add(user);
     }
 }
