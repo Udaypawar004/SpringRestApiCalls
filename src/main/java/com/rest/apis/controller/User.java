@@ -1,4 +1,4 @@
-package com.rest.apis;
+package com.rest.apis.controller;
 
 public class User {
     String firstName;
